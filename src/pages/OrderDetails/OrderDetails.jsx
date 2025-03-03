@@ -6,6 +6,7 @@ import orderService from '../../services/order';
 import { IoMdCheckmark } from "react-icons/io";
 import Toast from '../../components/Toast/Toast';
 import { useParams } from 'react-router-dom';
+import noImage from '../../assets/images/noimage.jpg';
 
 const paymentStatus = [
   {
@@ -102,7 +103,7 @@ const OrderDetails = () => {
                   order.orderItem?.map((item) => (
                     <tr key={item._id}>
                       <td className='productImg'>
-                        <img src={'https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70'} alt="img" />
+                        <img src={noImage} alt="noImage" />
                       </td>
                       <td>{item.productId.title}</td>
                       <td>₹{formatNumbers(item.productId.discountedPrice)}</td>

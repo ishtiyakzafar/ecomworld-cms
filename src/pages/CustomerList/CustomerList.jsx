@@ -4,6 +4,7 @@ import userService from '../../services/user';
 import { toast } from 'react-toastify';
 import moment from 'moment';
 import Toast from '../../components/Toast/Toast';
+import userImg from '../../assets/images/user.webp';
 
 const CustomerList = () => {
   const [customerList, setCustomerList] = useState([]);
@@ -49,9 +50,9 @@ const CustomerList = () => {
                   customerList.map((item) => (
                     <tr key={item._id}>
                       <td className='productImg'>
-                        <img src={'https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70'} alt="img" />
+                        <img src={userImg} alt="img" />
                       </td>
-                      <td>{item.name}</td>
+                      <td>{item.name || 'NA'}</td>
                       <td>{item.email}</td>
                       <td>{moment(item.createdAt).format("MMM Do YY")}</td>
                     </tr>

@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { MdOutlineModeEdit } from 'react-icons/md';
 import Toast from '../../components/Toast/Toast';
 import Swal from 'sweetalert2';
+import noImage from '../../assets/images/noimage.jpg';
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
@@ -80,7 +81,7 @@ const ProductList = () => {
                   products.map((item) => (
                     <tr key={item._id}>
                       <td className='productImg'>
-                        <img src={'https://rukminim1.flixcart.com/image/612/612/xif0q/jean/h/y/g/34-jeans-bt008-laheja-original-imagqqbsfgmdhcvn.jpeg?q=70'} alt="img" />
+                        <img src={noImage} alt="noImage" />
                       </td>
                       <td>{item.title}</td>
                       <td>{item.topLevelCategory}/{item.secondLevelCategory}/{item.thirdLevelCategory}</td>
